@@ -42,6 +42,15 @@ Source0: %{name}-%{version}.tar.gz
 %description
 Qubes-branded backgrounds, icons, themes.
 
+%package -n plymouth-theme-qubes-assemble
+Summary:    Plymouth "qubes-assemble" theme
+Requires:   plymouth-plugin-two-step
+Requires:   plymouth-scripts
+
+%description -n plymouth-theme-qubes-assemble
+A theme that features the Qubes logo assembling from pieces.
+Based on "Charge" theme.
+
 %package efi
 Summary:    Qubes OS theme for EFI boot manager (rEFInd)
 
@@ -566,6 +575,16 @@ xdg-icon-resource forceupdate --theme oxygen || :
 /usr/share/pixmaps/bootloader/apple/qubes/disk_label.contentDetails
 /usr/share/pixmaps/bootloader/apple/qubes/disk_label_2x
 /usr/share/pixmaps/bootloader/apple/qubes.icns
+
+%files -n plymouth-theme-qubes-assemble
+%{_datadir}/plymouth/themes/qubes-assemble/box.png
+%{_datadir}/plymouth/themes/qubes-assemble/bullet.png
+%{_datadir}/plymouth/themes/qubes-assemble/entry.png
+%{_datadir}/plymouth/themes/qubes-assemble/lock.png
+%{_datadir}/plymouth/themes/qubes-assemble/progress-*.png
+%{_datadir}/plymouth/themes/qubes-assemble/throbber-*.png
+%{_datadir}/plymouth/themes/qubes-assemble/qubes-assemble.plymouth
+
 
 %files efi
 /boot/efi/EFI/qubes/splash.png

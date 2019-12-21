@@ -1,4 +1,4 @@
-DIRS = qubes-dark
+DIRS = qubes-dark qubes-assemble
 
 all:
 	for dir in $(DIRS); do $(MAKE) -C $$dir $@ || exit 1; done
